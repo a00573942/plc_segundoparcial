@@ -1,0 +1,24 @@
+temperatura = float(input("ingresar la temperatura corporal del paciente: "))
+dias = int(input("ingresar cuántos días lleva el paciente con los síntomas: "))
+sintomas = input("escriba el número de cada síntoma que presente el paciente: 1 tos, 2 fatiga extrema, 3 pérdida de peso, 4 dolor de garganta, 5 dificultad para respirar: ")
+
+if (temperatura <= 36.5 ):
+  print("No tiene fiebre :)")
+
+elif (temperatura > 36.5 and temperatura < 38 ):
+  print("fiebre baja")
+
+elif (temperatura > 38 ):
+  print("fiebre alta")
+
+elif (dias > 7 and sintomas == 1 or sintomas == 2 or sintomas == 3):
+  print("enfermedad crónica")
+
+elif (temperatura > 36 and temperatura < 36.6 and sintomas == 1):
+  print("infección respiratoria leve")
+
+elif (temperatura > 36.6 and temperatura < 38 and sintomas == 1 or sintomas == 4):
+  print("infección respiratoria medida")
+
+elif (temperatura > 38 and sintomas == 5):
+  print("infección respiratoria grave")
